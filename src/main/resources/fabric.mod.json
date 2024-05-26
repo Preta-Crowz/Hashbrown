@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "hashbrown",
+	"version": "${version}",
+	"name": "hashbrown",
+	"description": "Ignore hash checking on server resource pack.",
+	"authors": [
+		"Koko Ayame"
+	],
+	"contact": {
+		"homepage": "https://siro.dev",
+		"sources": "https://siro.dev"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hashbrown/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"dev.siro.hashbrown.Hashbrown"
+		]
+	},
+	"mixins": [
+		{
+			"config": "hashbrown.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
