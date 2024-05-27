@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 @Mixin(ServerResourcePackProvider.class)
 public class HashbrownMixin {
-	public static final Logger LOGGER = LoggerFactory.getLogger("hashbrown");
+	private static final Logger LOGGER = LoggerFactory.getLogger("hashbrown");
 
 	@Inject(at = @At("HEAD"), method = "verifyFile(Ljava/lang/String;Ljava/io/File;)Z", cancellable = true)
 	private void AntiVerify(CallbackInfoReturnable<Boolean> cir) {
